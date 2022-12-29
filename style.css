@@ -85,3 +85,12 @@ th {padding:2px 6px 2px 6px; color:#FFF; line-height:1.7em; letter-spacing:1px; 
 	box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
 	padding:10px;
 }
+.p_close {
+	position:absolute;
+	right:10px;
+	top:5px;
+	text-indent:-9999px;
+	background:url(closebtnicon.html);
+	width:18px;
+	height:19px;
+}
