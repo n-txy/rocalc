@@ -13,19 +13,19 @@
 <base target="_blank">
 <title>Ragnarok Online Classic Calc</title>
 
-<!--<script type="text/javascript">
+<!--<script>
 window.onerror=function(){
 	alert('Wild bug appeared!\nPlease report this error via e-mail (at the top).\nIf calc stopped working, then reload webpage.\n\n�Un bug salvaje apareci�!\nPor favor informa de este error enviandome un e-mail.\nEs posible que la calculadora haya dejado de funcionar, en ese caso recargue la p�gina web.');
 	return true;
 }
 </script>-->
-<script type="text/javascript">Lang=0; PvP=0;</script>
-<script type="text/javascript" src="skill.js"></script>
-<script type="text/javascript" src="head.js"></script>
-<script type="text/javascript" src="item.js"></script>
-<script type="text/javascript" src="etc.js"></script>
+<script>Lang=0; PvP=0;</script>
+<script src="./js/skill.js"></script>
+<script src="./js/head.js"></script>
+<script src="./js/item.js"></script>
+<script src="./js/etc.js"></script>
 
-<script type="text/javascript">
+<script>
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-37460810-2']);
   _gaq.push(['_trackPageview']);
@@ -75,7 +75,7 @@ RO server: <select id="server" onChange="servers() | SaveTheme()"><option value=
 </div>
 <br>
 
-<h3><img src="images/save.png" alt="(icon)" style="margin:0 19px 0 0; vertical-align:middle;">Save & Load</h3>
+<h3><img src="./images/save.png" alt="(icon)" style="margin:0 19px 0 0; vertical-align:middle;">Save & Load</h3>
 <div class="main">
 
 <!--<input type="button" value="Save Cookie" onclick="SaveCookie()">
@@ -97,7 +97,7 @@ RO server: <select id="server" onChange="servers() | SaveTheme()"><option value=
 <br>
 
 
-<h3><img src="images/char.gif" alt="(icon)" style="margin:0 19px 0 0; vertical-align:middle;">Character Simulator</h3>
+<h3><img src="./images/char.gif" alt="(icon)" style="margin:0 19px 0 0; vertical-align:middle;">Character Simulator</h3>
 <div class="main">
 
 <table class="tborder" style="font-weight:bold; margin-right:0"><tr><td colspan="6" class="subheader">Stats ( Remaining Status Points: <span id="A_STPOINT">48</span> )
@@ -334,7 +334,7 @@ Equipment &amp; Cards
 </div>
 <br>
 
-<h3><img src="images/buffitem.gif" alt="(icon)" style="margin:0 19px 0 0; vertical-align:middle;">Buffs, Items and other stuff</h3>
+<h3><img src="./images/buffitem.gif" alt="(icon)" style="margin:0 19px 0 0; vertical-align:middle;">Buffs, Items and other stuff</h3>
 <div class="main">
 
 <table><tr>
@@ -393,7 +393,7 @@ Equipment &amp; Cards
 
 <br>
 
-<h3><img src="images/magno.gif" alt="(icon)" style="margin:0 19px 0 0; vertical-align:middle; float:left;">Monster Combat Simulator
+<h3><img src="./images/magno.gif" alt="(icon)" style="margin:0 19px 0 0; vertical-align:middle; float:left;">Monster Combat Simulator
 <input type="button" value="ReCalculate" onclick="calc()" style="margin:18px 0px 12px 14%;"></h3>
 <div class="main">
 
@@ -533,13 +533,6 @@ Remade/Updated by <a href="http://forum.ratemyserver.net/general-discussion/(non
 Last updates by <a href="http://forum.ratemyserver.net/general-discussion/updated-rms-non-official-calc/">kurimet</a><br>
 </div>
 
-
-<script type="text/javascript" src="monster.js"></script>
-<script type="text/javascript" src="card.js"></script>
-<script type="text/javascript" src="foot.js"></script>
-
-</form>
-<span id="popupURL"></span>
-</body>
-<!-- Mirrored from rocalc.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Dec 2022 02:20:54 GMT -->
-</html>
+<script src="./js/monster.js"></script>
+<script src="./js/card.js"></script>
+<script src="./js/foot.js"></script>
