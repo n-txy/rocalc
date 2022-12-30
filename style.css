@@ -43,7 +43,6 @@ th {padding:2px 6px 2px 6px; color:#FFF; line-height:1.7em; letter-spacing:1px; 
 .right {float:right; font-weight:lighter;}
 .left {float:left; font-weight:lighter;}
 .manual input {border:1px solid #777; width:22px;}
-.mail {background:url(images/ce4.png) no-repeat; padding:0 58px;}
 #foot {line-height:185%; text-align:right;}
 
 #calcoptions {
@@ -84,13 +83,4 @@ th {padding:2px 6px 2px 6px; color:#FFF; line-height:1.7em; letter-spacing:1px; 
 	-moz-box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
 	box-shadow:0 0 18px rgba(0, 0, 0, 0.4);
 	padding:10px;
-}
-.p_close {
-	position:absolute;
-	right:10px;
-	top:5px;
-	text-indent:-9999px;
-	background:url(closebtnicon.html);
-	width:18px;
-	height:19px;
 }
