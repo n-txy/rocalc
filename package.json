@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "vite": "^4.0.0"
+  },
+  "dependencies": {
+    "vite-plugin-live-reload": "^3.0.1"
   }
 }

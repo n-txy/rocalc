@@ -1,12 +1,14 @@
 import { defineConfig } from "vite"
+import liveReload from 'vite-plugin-live-reload'
 import { copyFiles } from "./src/plugins/copy-files";
 
 export default defineConfig({
     plugins: [
-        copyFiles('./src/html', './public/html'),
-        copyFiles('./src/images', './public/images'),
-		copyFiles('./src/js', './public/js'),
-		copyFiles('./src/styles', './public/styles'),
+		liveReload('./src/js/*.js'),
+        copyFiles('./src/html', './dist/html'),
+        copyFiles('./src/images', './dist/images'),
+		copyFiles('./src/js', './dist/js'),
+		copyFiles('./src/styles', './dist/styles'),
     ],
 	root: 'src',
 	build: {
