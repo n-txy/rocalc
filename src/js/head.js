@@ -133,6 +133,27 @@ function cycleEnemyList(){
         if ( (parseInt(a.mobExp) || 0 ) > ( parseInt(b.mobExp) || 0 ) ) { return -1; }
         return 0;
     });
+
+    NameMobExpMap.forEach(element => {
+        if (element.mobHitCount <= 20)
+        {
+            let tempRow = bExpPerHitTable.insertRow();
+            let tempCell0 = tempRow.insertCell(0);
+            let tempCell1 = tempRow.insertCell(1);
+            let tempCell2 = tempRow.insertCell(2);
+    
+            tempCell0.innerHTML = element.mobName;
+            tempCell1.innerHTML = element.mobExp;
+            tempCell2.innerHTML = element.mobHitCount;
+        }
+    
+    });
+
+    veryTempSelector.selectedIndex = veryTempMonsterIndex;
+    calc();
+    // console.log(NameMobExpMap.mobName + NameMobName.mobExp);
+}
+
 function BattleCalc999() {
     wbairitu = 1, wCast = 0, wHITsuu = 1, n_rangedAtk = 0, wLAch = 0, w_DMG = [0, 0, 0], not_use_card = 0, cast_kotei = 0, str_PerHIT_DMG = 0, SG_Special_ch = 0;
     for (var _ = 0; _ <= 2; _++) Last_DMG_A[_] = 0, Last_DMG_B[_] = 0;
