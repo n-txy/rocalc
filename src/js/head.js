@@ -38,10 +38,61 @@ function restrictCardslot(_) {
     (card_restrict = 1 * c.restrict_cardslot.checked) ? (0 != m_Item[c.A_weapon1.value][5] ? (c.A_weapon1_card1.disabled = !1, c.A_weapon1_card2.disabled = !1, c.A_weapon1_card3.disabled = !1, c.A_weapon1_card4.disabled = !1) : (c.A_weapon1_card1.disabled = !0, c.A_weapon1_card1.value = 0, c.A_weapon1_card2.disabled = !0, c.A_weapon1_card2.value = 0, c.A_weapon1_card3.disabled = !0, c.A_weapon1_card3.value = 0, c.A_weapon1_card4.disabled = !0, c.A_weapon1_card4.value = 0), n_Nitou && (0 != m_Item[c.A_weapon2.value][5] ? (c.A_weapon2_card1.disabled = !1, c.A_weapon2_card2.disabled = !1, c.A_weapon2_card3.disabled = !1, c.A_weapon2_card4.disabled = !1) : (c.A_weapon2_card1.disabled = !0, c.A_weapon2_card1.value = 0, c.A_weapon2_card2.disabled = !0, c.A_weapon2_card2.value = 0, c.A_weapon2_card3.disabled = !0, c.A_weapon2_card3.value = 0, c.A_weapon2_card4.disabled = !0, c.A_weapon2_card4.value = 0)), 0 != m_Item[c.A_head1.value][5] ? c.A_head1_card.disabled = !1 : (c.A_head1_card.disabled = !0, c.A_head1_card.value = 0), 0 != m_Item[c.A_head2.value][5] ? c.A_head2_card.disabled = !1 : (c.A_head2_card.disabled = !0, c.A_head2_card.value = 0), 0 != m_Item[c.A_left.value][5] ? c.A_left_card.disabled = !1 : (c.A_left_card.disabled = !0, c.A_left_card.value = 0), 0 != m_Item[c.A_body.value][5] ? c.A_body_card.disabled = !1 : (c.A_body_card.disabled = !0, c.A_body_card.value = 0), 0 != m_Item[c.A_shoulder.value][5] ? c.A_shoulder_card.disabled = !1 : (c.A_shoulder_card.disabled = !0, c.A_shoulder_card.value = 0), 0 != m_Item[c.A_shoes.value][5] ? c.A_shoes_card.disabled = !1 : (c.A_shoes_card.disabled = !0, c.A_shoes_card.value = 0), 0 != m_Item[c.A_acces1.value][5] ? c.A_acces1_card.disabled = !1 : (c.A_acces1_card.disabled = !0, c.A_acces1_card.value = 0), 0 != m_Item[c.A_acces2.value][5] ? c.A_acces2_card.disabled = !1 : (c.A_acces2_card.disabled = !0, c.A_acces2_card.value = 0)) : (c.A_weapon1_card1.disabled = !1, c.A_weapon1_card2.disabled = !1, c.A_weapon1_card3.disabled = !1, c.A_weapon1_card4.disabled = !1, n_Nitou && (c.A_weapon2_card1.disabled = !1, c.A_weapon2_card2.disabled = !1, c.A_weapon2_card3.disabled = !1, c.A_weapon2_card4.disabled = !1), c.A_head1_card.disabled = !1, c.A_head2.disabled ? c.A_head2_card.disabled = !0 : c.A_head2_card.disabled = !1, c.A_left.disabled ? c.A_left_card.disabled = !0 : c.A_left_card.disabled = !1, c.A_body_card.disabled = !1, c.A_shoulder_card.disabled = !1, c.A_shoes_card.disabled = !1, c.A_acces1_card.disabled = !1, c.A_acces2_card.disabled = !1), calc()
 }
 
+var NameMobExpMap = [];
+
+// n: 0 clears content, 1 appends
 function myInnerHtml(ElementId, e, n) {
     if (0 == n) {
         for (wIHOB = document.getElementById(ElementId); wIHOB.hasChildNodes();) wIHOB.removeChild(wIHOB.firstChild);
         wIHOB.innerHTML = e
+
+        // this really shouldnt be here
+        if (ElementId == 'AtkBaseExp')
+        {
+            
+
+            veryTempSelector = document.getElementById("SelectedEnemyName");
+            veryTempMonsterName = veryTempSelector[veryTempSelector.selectedIndex].text;
+            veryTempSelector2 = document.getElementById("MaxATKnum");
+            veryTempMaxAtkNum = veryTempSelector2.innerHTML;
+            veryTempExpPerHit = e;
+            e = e.replace(" exp", "");
+            e = parseInt(e);
+
+            console.log(veryTempMonsterName + " " + (veryTempSelector2 = document.getElementById("AveATKnum").innerHTML));
+            //console.log(veryTempVar[veryTempVar.selectedIndex].text);
+            //console.log(ElementId + " logged " + e);
+            //console.log(veryTempMonsterName + " " + e);
+            try {
+                if (typeof bestBaseExpPerHit === 'undefined')
+                    bestBaseExpPerHit = 0;
+                
+                if ( typeof bestBaseExpPerHitMob === 'undefined')
+                    bestBaseExpPerHitMob = "";
+
+                // if ( isNaN(e) == false && bestBaseExpPerHit < e )
+                // {
+                //     bestBaseExpPerHit = e;
+                //     bestBaseExpPerHitMob = veryTempMonsterName;
+                // }
+                let tempObj = {
+                    mobName: veryTempMonsterName,
+                    mobExp: e,
+                    mobHitCount: veryTempMaxAtkNum
+                }
+                if (!isNaN(tempObj.mobExp) && !isNaN(tempObj.mobHitCount))
+                {
+                    if(parseInt(tempObj.mobExp) > 1)
+                        NameMobExpMap.push(tempObj);
+                }
+                    
+                //console.log(bestBaseExpPerHitMob + " " + bestBaseExpPerHit);
+                //console.log(tempObj);
+            } catch (error) {
+
+            }
+            
+        }
     } else wIHOB = document.getElementById(ElementId), wIHOB.insertAdjacentHTML("BeforeEnd", e)
 }
 
