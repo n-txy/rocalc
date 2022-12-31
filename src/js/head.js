@@ -96,6 +96,42 @@ function myInnerHtml(ElementId, e, n) {
     } else wIHOB = document.getElementById(ElementId), wIHOB.insertAdjacentHTML("BeforeEnd", e)
 }
 
+    console.log("Cycling!");
+    NameMobExpMap = [];
+    var bExpPerHitTable = document.getElementById("bExpPerHitCompareTable");
+    while( bExpPerHitTable.rows.length > 2) bExpPerHitTable.rows[2].remove();
+
+    veryTempVar = document.getElementById("SelectedEnemyName");
+    veryTempMonsterIndex = veryTempSelector.selectedIndex;
+
+    // stinky version
+    // for (let i = 0; i < veryTempVar.options.length; i++)
+    // {
+    //     veryTempVar.selectedIndex = i;
+    //     try{calc();}
+    //     catch(err){console.log("Error: " + err)};
+    // }
+
+    let options = document.querySelectorAll('#SelectedEnemyName > option');
+    options.forEach((option) => {
+        veryTempVar.selectedIndex = option.index;
+        try{calc();}
+        catch(err){console.log("Error: " + err)};
+    });
+    
+    // jquery version
+    // $("#SelectedEnemyName > option").each(function() {
+    //     veryTempVar.selectedIndex = this.index;
+    //     try{calc();}
+    //     catch(err){console.log("Error: " + err)};
+    // });
+
+    NameMobExpMap = NameMobExpMap
+    .sort((a, b) => {
+        if ( (parseInt(a.mobExp) || 0 ) < ( parseInt(b.mobExp) || 0 ) ) { return 1; }
+        if ( (parseInt(a.mobExp) || 0 ) > ( parseInt(b.mobExp) || 0 ) ) { return -1; }
+        return 0;
+    });
 function BattleCalc999() {
     wbairitu = 1, wCast = 0, wHITsuu = 1, n_rangedAtk = 0, wLAch = 0, w_DMG = [0, 0, 0], not_use_card = 0, cast_kotei = 0, str_PerHIT_DMG = 0, SG_Special_ch = 0;
     for (var _ = 0; _ <= 2; _++) Last_DMG_A[_] = 0, Last_DMG_B[_] = 0;
