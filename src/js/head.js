@@ -96,6 +96,7 @@ function myInnerHtml(ElementId, e, n) {
     } else wIHOB = document.getElementById(ElementId), wIHOB.insertAdjacentHTML("BeforeEnd", e)
 }
 
+function cycleEnemyList(){
     console.log("Cycling!");
     NameMobExpMap = [];
     var bExpPerHitTable = document.getElementById("bExpPerHitCompareTable");
