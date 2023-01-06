@@ -410,6 +410,7 @@ function KakutyouKansuu() {
             var e = Math.floor(100 * (n - 9.9)) / 100;
             e < 0 && (e = 0), myInnerHtml("A_KakutyouData", u, 0)
         } else if (14 == wKK) {
+            // n_tok[30]~[39] should be bonus physical racial damage
             F_MOD = 0, G_MOD = 0, B_MOD = 0, SM_MOD = 0, B_MOD += n_tok[80] + n_tok[26];
             for (a = 0; a <= 7; a++) 244 == n_A_card[a] && (G_MOD += 40);
             for (EquipNumSearch(835) && (SM_MOD += 10), 844 != n_A_Equip[9] && 1753 != n_A_Equip[9] || (SM_MOD += 10), 844 != n_A_Equip[10] && 1753 != n_A_Equip[10] || (SM_MOD += 10), a = 0; a < 8; a += 2) 29 == n_A_Buf9[a] && (SM_MOD += n_A_Buf9[a + 1]);
