@@ -1,4 +1,4 @@
-﻿//[ id, display location, job that can use, classic atk/def, renewal atk/def, renewal matk/mdef, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =?]
+﻿//[ id, display location, job that can use, classic atk/def, renewal atk/def, renewal matk/mdef, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =?], used in KakutyouKansuu()
 m_Item = [
 [0,0,0,0,1,0,0,0,"(No Weapon)",0,"",0]
 ,[1,1,0,17,1,"3/4",40,1,"Knife",0,"",0]
