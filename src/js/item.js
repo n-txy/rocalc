@@ -1823,6 +1823,8 @@ m_Item = [
 ,[1818,64,52,0,0,0,20,60,"Moonlight Ring_",0,"",19,2,0]
 ,[1819,1,1,129,4,0,0,1,"Combat Knife (rental)",0,"Recover 3 SP when dealing ATK based damage.",16,10,187,1,57,10,56,-10,193,1,0]
 ,[1820,51,1,0,0,0,0,1,"Elven Ears (rental)",0,"",4,1,0]
+,[1821,50,0,0,0,0,30,1,"Lunatic Hat (Alfheim)",0,"LUK +3, Crit +5, Damage to Plant +20% ",19,2,6,5,33,20,0]
+,[1822,64,0,0,0,1,10,1,"Cute Grass Necklace (Alfheim)",0,"A charming necklace woven with clover flowers.",17,5,18,5,0]
 ];
 
 //[ id, display location, job that can use, atk/def, level of weapon, slots, weight, level required to use, "name of item", ?, "description", effect1, effect2, ..., 0 =? ]
